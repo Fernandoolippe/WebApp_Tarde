@@ -1,0 +1,24 @@
+﻿@model List<WebApp_Tarde.Entidades.ProdutoEntidade>
+   
+<h2>Lista de Produtos</h2>
+
+<table class="table table-striped"> 
+    <thead>
+        <tr>
+            <th>Descrição do Produto</th>
+            <th>Valor</th>
+            <th>MAnipular</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <td>@produto.Descricao</td>
+            <td>R$ @produto.Valor</td>
+            <td><a class="btn btn-warning" href="#">Editar</a></td>
+            <td><a class="btn btn-danger" href="#">Excluir</a></td>
+        }
+
+    </tbody>
+</table>
